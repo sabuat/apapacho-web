@@ -24,9 +24,8 @@ export default function Nosotros() {
             
             {/* Foto Editorial / Espacio de trabajo */}
             <div className="relative h-[500px] md:h-auto bg-gray-100">
-               {/* Sube una foto tuya trabajando o de libros apilados artísticamente a /images/nosotros.jpg */}
                <img 
-                 src="/images/nosotros.jpg" 
+                 src="/images/apapacho.jpg" 
                  alt="Espacio de trabajo Apapacho" 
                  className="absolute inset-0 w-full h-full object-cover grayscale hover:grayscale-0 transition duration-1000"
                />

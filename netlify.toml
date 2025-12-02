@@ -1,8 +1,3 @@
 [build]
   command = "npm run build"
   publish = ".next"
-
-# Esto es lo importante: Obligamos a usar la versión 4
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
-  version = "4.41.3"
