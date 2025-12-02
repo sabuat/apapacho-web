@@ -34,21 +34,17 @@ export default function Nosotros() {
             {/* Texto Historia */}
             <div className="bg-brand-bg p-12 md:p-24 flex flex-col justify-center">
                <span className="text-xs font-bold uppercase tracking-widest text-brand-gold mb-6">Nuestro Origen</span>
-               <h2 className="text-4xl font-serif mb-8 text-brand-dark">De Caracas a São Paulo</h2>
+               <h2 className="text-4xl font-serif mb-8 text-brand-dark">De Brasil para el mundo</h2>
                <div className="prose prose-lg font-texto text-gray-600 font-light">
                  <p className="mb-6">
-                   La palabra <strong>"Apapacho"</strong> se dice que proviene del náhuatl y significa 
-                   <em>"acariciar con el alma"</em>. Esa es nuestra brújula.
+                   La idea de esta editorial nació en una pared de un cuarto alquilado en Manaos, a mediados del 2016. Una idea que demoró un tiempo para salir del papel y convertirse en realidad. Por aquel entonces tenia la intención de ser 100% en portugues, con alma venezolana. Su nombre en aquel entonces era ,<i>Editora Neyes</i>, por los araguaneyes.
                  </p>
                  <p className="mb-6">
-                   Fundada en 2024 por Sabuat Urbina Ribeiro, esta editorial surgió como respuesta 
-                   al duelo migratorio. Entendimos que la literatura no es solo entretenimiento, 
-                   es una herramienta de supervivencia.
+                   En el 2024 Sabuat Urbina Ribeiro decide fundar esta editora, como un espacio donde organizar sus escritos, cuentos y novelas que estaban 'regados' desde un poco antes de su emigración forzada en el 2015. Mas allá de un espacio personal, el editor entendió que esta editorial surgió no solo como respuesta al duelo migratorio, sino como un espacio donde las palabras, la escritura, sirven de consuelo. Entendimos que la literatura no es solo entretenimiento, es una herramienta de supervivencia.
                  </p>
-                 <p>
-                   Hoy, operamos desde el corazón de São Paulo, traduciendo esa nostalgia en 
-                   ediciones cuidadas, papel de calidad y una curaduría que prioriza la 
-                   voz del autor sobre las tendencias del mercado.
+                 <p className="mb-6">
+                   La palabra <strong>"Apapacho"</strong> se dice que proviene del náhuatl y significa 
+                   <em>"acariciar con el alma"</em>. Esa es nuestra brújula. Hoy, operamos desde el corazón de São Paulo, traduciendo esa nostalgia en ediciones digitales del más alto padrón y una curaduría que prioriza la voz del autor sobre las tendencias del mercado.
                  </p>
                </div>
             </div>
@@ -63,8 +59,8 @@ export default function Nosotros() {
                  <div className="border-l border-brand-gold pl-8">
                     <h3 className="text-2xl font-serif italic mb-4 text-brand-gold">Estética</h3>
                     <p className="font-texto font-light opacity-80 leading-relaxed">
-                       El libro es un objeto de arte. Cuidamos cada detalle, desde la tipografía 
-                       hasta el gramaje del papel. Queremos que tener un libro nuestro sea una experiencia sensorial.
+                       El libro es un objeto de arte. Nuestro trabajo es arte digital, por lo que cuidamos cada detalle, desde la escencia de la portada
+                       hasta el detalle de la tipografía.
                     </p>
                  </div>
 
@@ -81,8 +77,7 @@ export default function Nosotros() {
                  <div className="border-l border-brand-gold pl-8">
                     <h3 className="text-2xl font-serif italic mb-4 text-brand-gold">Comunidad</h3>
                     <p className="font-texto font-light opacity-80 leading-relaxed">
-                       Ser autor es solitario. Ser lector, a veces también. Apapacho es el puente. 
-                       Creamos espacios (físicos y virtuales) para que esas soledades se encuentren.
+                       Ser autor es un acto solitario. Ser lector, a veces también. Apapacho nasce como un puente, creando espacios virtuales para que esas soledades se encuentren.
                     </p>
                  </div>
 
@@ -91,14 +86,13 @@ export default function Nosotros() {
         </section>
 
         {/* --- SECCIÓN 4: LA EDITORA (Firma) --- */}
-        <section className="py-24 px-6 text-center bg-white">
+        <section className="py-2 px-6 mb-6 text-center bg-white">
            <img 
-             src="/images/firma.png" // Puedes subir una foto de tu firma real o dejarlo sin imagen
+             src="/images/firma.png"
              alt="Firma" 
-             className="h-20 w-auto mx-auto mb-6 opacity-50"
+             className="w-auto mx-auto -mb-28 opacity-70"
            />
-           <h3 className="text-xl font-serif text-brand-dark">Sabuat Urbina Ribeiro</h3>
-           <span className="text-xs font-bold uppercase tracking-widest text-gray-400">Directora Editorial</span>
+           <span className="-mt-20 text-sm font-bold uppercase tracking-widest text-brand-blue">Director Editorial</span>
         </section>
 
       </div>
