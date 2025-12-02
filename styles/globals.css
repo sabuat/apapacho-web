@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Poiret+One&family=Quicksand:wght@300..700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: white;
+  color: #2D2D2D;
+}
+
+/* --- ANIMACIONES DE ENTRADA --- */
+
+/* 1. Literatura (De arriba a abajo) */
+@keyframes slideDownFade {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* 2. Que te (De izquierda a derecha) */
+@keyframes slideRightFade {
+  from { opacity: 0; transform: translateX(-30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* 3. Abraza (De abajo a arriba) */
+@keyframes slideUpFade {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- CLASES PARA USAR EN EL HTML --- */
+.anim-down {
+  animation: slideDownFade 0.8s ease-out forwards;
+  opacity: 0; /* Empieza invisible */
+}
+
+.anim-right {
+  animation: slideRightFade 0.8s ease-out 0.4s forwards; /* 0.4s de retraso (espera a la primera) */
+  opacity: 0;
+}
+
+.anim-up {
+  animation: slideUpFade 0.8s ease-out 0.8s forwards; /* 0.8s de retraso (espera a las anteriores) */
+  opacity: 0;
+}
