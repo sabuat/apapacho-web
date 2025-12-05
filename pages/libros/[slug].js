@@ -143,7 +143,7 @@ export default function FichaLibro() {
                name="lista-espera" 
                method="POST" 
                data-netlify="true" 
-               action="/exito"
+               action="/exito?tipo=lista"
              >
                 <input type="hidden" name="form-name" value="lista-espera" />
                 

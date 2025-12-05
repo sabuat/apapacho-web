@@ -149,6 +149,7 @@ export default function Home() {
                  method="POST" 
                  data-netlify="true" 
                  className="w-full max-w-md space-y-6"
+                 action="/exito?tipo=newsletter"
                >
                   <input type="hidden" name="form-name" value="newsletter" />
                   

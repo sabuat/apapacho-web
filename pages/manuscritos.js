@@ -67,6 +67,7 @@ export default function Manuscritos() {
                    accept=".pdf,.doc,.docx" // Filtra para que solo puedan elegir estos archivos
                    className="text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:border-0 file:text-xs file:font-semibold file:bg-brand-bg file:text-brand-dark hover:file:bg-brand-dark-blue transition cursor-pointer" 
                    required
+                   action="/exito?tipo=manuscrito"
                  />
               </div>
 

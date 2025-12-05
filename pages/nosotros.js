@@ -85,14 +85,21 @@ export default function Nosotros() {
            </div>
         </section>
 
-        {/* --- SECCIÓN 4: LA EDITORA (Firma) --- */}
-        <section className="py-2 px-6 mb-6 text-center bg-white">
+{/* --- SECCIÓN 4: LA EDITORA (Firma) --- */}
+        <section className="py-6 px-4 mb-6 text-center bg-white flex flex-col items-center">
+           
+           {/* Imagen de la firma */}
            <img 
              src="/images/firma.png"
              alt="Firma" 
-             className="w-auto mx-auto -mb-28 opacity-70"
+             className="w-auto md:w-auto h-80 mx-auto opacity-80"
            />
-           <span className="-mt-20 text-sm font-bold uppercase tracking-widest text-brand-blue">Director Editorial</span>
+           
+           {/* Cargo / Título */}
+           <span className="-mt-8 md:-mt-10 text-sm font-bold uppercase tracking-widest text-brand-blue relative z-10 bg-white/30 backdrop-blur-[1px] px-2">
+             Directora Editorial
+           </span>
+           
         </section>
 
       </div>
