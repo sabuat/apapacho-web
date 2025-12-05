@@ -3,7 +3,7 @@ export const libros = [
     slug: "bestias-de-tierras-malditas",
     titulo: "Bestias de Tierras Malditas", 
     autor: "Sabuat Urbina Ribeiro", 
-    img: "/images/BTM.jpg", 
+    img: "/images/portadas/BTM.jpg", 
     tag: "Cuentos",
     sinopsis: [
       "En 'Bestias de Tierras Malditas', cada relato es un territorio habitado por personajes que deambulan entre la memoria y el abandono, entre la lluvia que inunda los patios y el hambre que silba en las aceras.",
@@ -17,7 +17,7 @@ export const libros = [
     slug: "la-ultima-dragona",
     titulo: "La Última Dragona", 
     autor: "Erika Villarroel", 
-    img: "/images/Dragona.jpg", 
+    img: "/images/portadas/Dragona.jpg", 
     tag: "Novela Joven",
     sinopsis: [
     "En 'La Última Dragona', Erika Villarroel nos guía a través del viaje de Dalia, una joven que regresa al pueblo donde creció después de años de ausencia y distanciamiento emocional para organizar el funeral de su madre. Abrumada por la nostalgia y la pérdida, revive los rasgos de una vida marcada por silencios y secretos familiares.",
@@ -31,7 +31,7 @@ export const libros = [
     slug: "la-sensacion-eterna",
     titulo: "La eterna sensación de estar pérdido", 
     autor: "Sabuat Urbina Ribeiro", 
-    img: "/images/Perdido.jpg", 
+    img: "/images/portadas/Perdido.jpg", 
     tag: "Próximamente",
     sinopsis: [
       "En 'La Eterna Sensación de Estar Perdido', Sabuat Urbina Ribeiro despliega el mapa íntimo de una década de éxodo. A través de un diario de viaje por Lisboa, Oporto, Madrid y Barcelona, el autor venezolano residente en São Paulo teje memoria, desarraigo y la búsqueda de un hogar en la lengua.", 
@@ -45,7 +45,7 @@ export const libros = [
     titulo: "Somos hechos de palabras", 
     slug: "somos-hechos-de-palabras",
     autor: "Sabuat Urbina Ribeiro", 
-    img: "/images/Palabras.jpg", 
+    img: "/images/portadas/Palabras.jpg", 
     tag: "Ensayos",
     sinopsis: [
       "En el prefacio de la versión portuguesa de 'Somos hechos de palabras', la escritora brasileña Samara Sieber reflexiona sobre la obra de Sabuat Urbina Ribeiro:",
@@ -60,7 +60,7 @@ export const libros = [
     titulo: "Dos Chicas, Un Chico", 
     slug: "dos-chicas-un-chico",
     autor: "Erika Villarroel", 
-    img: "/images/chicas.jpg", 
+    img: "/images/portadas/chicas.jpg", 
     tag: "Novela Corta",
     sinopsis: [
       "Andrea parece tenerlo todo: éxito como modelo, un blog en crecimiento y una boda próxima. Pero su mundo se derrumba cuando un video íntimo de su pasado se filtra en internet. La autora Erika Villarroel nos sumerge con 'Dos chicas, un chico', en un drama inspirado en un escándalo real del showbizz venezolano.",
@@ -75,7 +75,7 @@ export const libros = [
     titulo: "Imagina Dragones", 
     slug: "imagina-dragones",
     autor: "Sabuat Urbina Ribeiro", 
-    img: "/images/imagina.jpg", 
+    img: "/images/portadas/imagina.jpg", 
     tag: "Literatura Fantástica",
     sinopsis: [
       "Imagina Dragões reúne una serie de relatos interconectados donde los dragones no son meras criaturas de fantasía, sino reflejos de la soledad, la resistencia y la búsqueda de pertenencia. A través de una prosa híbrida y poética, Sabuat Urbina Ribeiro crea un universo donde lo real y lo onírico se funden, explorando temas como la migración, la identidad y la memoria. Cada historia es una metáfora viva, escrita con un lenguaje que desafía los límites del portugués y el español.","Desde la despedida ritual de un dragón doméstico hasta la aparición de seres ancestrales en una feria urbana, el libro entrelaza lo cotidiano con lo extraordinario. Los personajes —migrantes, tatuadores, oficinistas, niños— encuentran en los dragones una presencia que los confronta, los consuela o los transforma. La narrativa oscila entre lo íntimo y lo colectivo, entre la pérdida y la redención.",
@@ -89,7 +89,7 @@ export const libros = [
     titulo: "El Último Mensaje", 
     slug: "el-ultimo-mensaje",
     autor: "Sabuat Urbina Ribeiro", 
-    img: "/images/mensaje.jpg", 
+    img: "/images/portadas/mensaje.jpg", 
     tag: "Novela",
     sinopsis: [
       "Escrita en el 2013, 'El Último Mensaje' es la primera novela de Sabuat Urbina Ribeiro. Una historia de amor y pérdida ambientada en la melancolía de un hospital del sur argentino, esta novela es un retrato íntimo de cómo un objeto trivial —un maletín— puede desatar un torbellino de recuerdos y conectar destinos aparentemente ajenos.",
@@ -105,7 +105,7 @@ export const libros = [
     titulo: "Diez besos tontos", 
     slug: "diez-besos-tontos",
     autor: "Erika Villarroel", 
-    img: "/images/besos.jpg", 
+    img: "/images/portadas/besos.jpg", 
     tag: "Romance",
     sinopsis: [
       "Carol, una joven venezolana que sueña con ser editora, motivo por el que viaja a Cuzco para una entrevista de trabajo que podría cambiar su vida. En el camino, se cruza con tres hombres que la hacen cuestionar sus miedos, su pasado y su corazón: un canadiense seductor, un brasileño amable y un inglés misterioso que aparece y desaparece cuando menos lo espera. Entre maletas perdidas, hostales cerrados, noches frías y besos que no deberían repetirse, Carol descubrirá que a veces el destino no se escribe en un plan, sino en una tarjeta de presentación.",
@@ -121,7 +121,7 @@ export const libros = [
     titulo: "Las Cosas que Escribí para mí", 
     slug: "las-cosas-que-escribi-para-mi",
     autor: "Sabuat Urbina Ribeiro", 
-    img: "/images/cosas.jpg", 
+    img: "/images/portadas/cosas.jpg", 
     tag: "Próximamente",
     sinopsis: [
       "'Las Cosas que Escribí para mí' es una obra que entrelaza memorias, reflexiones y narrativas íntimas, explorando experiencias personales y sentimentales en diversos escenarios de Brasil y más allá. Sabuat Urbina Ribeiro invita al lector a un viaje por sus recuerdos, destacando las vivencias en distintas ciudades y los momentos cruciales que moldearon su visión del mundo.",

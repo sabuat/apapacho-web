@@ -25,7 +25,7 @@ export default function Nosotros() {
             {/* Foto Editorial / Espacio de trabajo */}
             <div className="relative h-[500px] md:h-auto bg-gray-100">
                <img 
-                 src="/images/apapacho.jpg" 
+                 src="/images/institucional/apapacho.jpg" 
                  alt="Espacio de trabajo Apapacho" 
                  className="absolute inset-0 w-full h-full object-cover grayscale hover:grayscale-0 transition duration-1000"
                />
@@ -90,7 +90,7 @@ export default function Nosotros() {
            
            {/* Imagen de la firma */}
            <img 
-             src="/images/firma.png"
+             src="/images/institucional/firma.png"
              alt="Firma" 
              className="w-auto md:w-auto h-80 mx-auto opacity-80"
            />

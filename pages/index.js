@@ -44,7 +44,7 @@ export default function Home() {
              
              {/* Imagen */}
              <img 
-               src="/images/Perdido.jpg" 
+               src="/images/portadas/Perdido.jpg" 
                alt="Libro destacado" 
                className="w-64 h-auto shadow-2xl rotate-3 hover:rotate-0 transition duration-500"
              />
@@ -85,7 +85,7 @@ export default function Home() {
                   <span className="text-base font-semibold font-texto uppercase text-brand-dark tracking-widest">Cuentos</span>
                   <div className="flex-grow flex items-center justify-center py-8">
                      <img 
-                        src="/images/BTM.jpg"
+                        src="/images/portadas/BTM.jpg"
                         alt="Portada Libro 1" 
                         className="w-40 h-auto shadow-md group-hover:scale-105 transition duration-500"
                      />
@@ -103,7 +103,7 @@ export default function Home() {
                   <span className="text-base font-semibold font-texto uppercase text-brand-dark tracking-widest">Novela Joven</span>
                   <div className="flex-grow flex items-center justify-center py-8">
                      <img 
-                        src="/images/Dragona.jpg"
+                        src="/images/portadas/Dragona.jpg"
                         alt="Portada Libro 2" 
                         className="w-40 h-auto shadow-md group-hover:scale-105 transition duration-500"
                      />

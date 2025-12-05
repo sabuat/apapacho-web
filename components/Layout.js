@@ -14,7 +14,7 @@ export default function Layout({ children }) {
         {/* LOGO */}
         <Link href="/" className="hover:opacity-80 transition relative z-50">
            {/* Asegúrate de que esta imagen exista, si no se verá un icono roto */}
-           <img src="/images/logo.png" alt="Logo Apapacho" className="h-10 w-auto object-contain" />
+           <img src="/images/institucional/logo.png" alt="Logo Apapacho" className="h-10 w-auto object-contain" />
         </Link>
         
         {/* MENÚ DE ESCRITORIO (Oculto en móvil) */}
@@ -95,7 +95,7 @@ export default function Layout({ children }) {
           <div className="p-6 flex flex-col col-span-2 justify-between h-full">
              <div>
                <Link href="/" className="hover:opacity-80 transition block w-fit mx-auto">
-                 <img src="/images/logo2.png" alt="Logo Apapacho" className="h-40 w-auto object-contain" />
+                 <img src="/images/institucional/logo2.png" alt="Logo Apapacho" className="h-40 w-auto object-contain" />
                </Link>
                <Link href="/" className="font-serif mx-8 italic text-3xl text-brand-dark tracking-tight block mb-6 hover:text-brand-dark-blue transition">
                  Editorial Apapacho, nacida en Brasil con alma latinoamericana.
@@ -120,16 +120,16 @@ export default function Layout({ children }) {
              <h4 className="font-bold uppercase tracking-widest text-md mb-8 text-brand-dark-blue">Social</h4>
              <ul className="space-y-4 font-medium italic font-lg flex flex-col items-start text-gray-800">
                <a href="https://www.instagram.com/editorial.apapacho/" className="hover:text-brand-gold hover:translate-x-1 transition duration-300" target="_blank">
-               <img src="/images/instagram.png" alt="Instagram" className="inline h-4 w-4 mr-2 object-contain"/>
+               <img src="/images/logos/instagram.png" alt="Instagram" className="inline h-4 w-4 mr-2 object-contain"/>
                Instagram</a>
                <a href="https://www.threads.com/@editorial.apapacho" className="hover:text-brand-gold hover:translate-x-1 transition duration-300" target="_blank">
-               <img src="/images/threads.png" alt="Instagram" className="inline h-4 w-4 mr-2 object-contain"/>
+               <img src="/images/logos/threads.png" alt="Threads" className="inline h-4 w-4 mr-2 object-contain"/>
                Threads</a>
                <a href="https://www.tiktok.com/@apapacho.editorial" className="hover:text-brand-gold hover:translate-x-1 transition duration-300" target="_blank">
-               <img src="/images/tik-tok.png" alt="Instagram" className="inline h-4 w-4 mr-2 object-contain"/>
+               <img src="/images/logos/tik-tok.png" alt="Tik Tok" className="inline h-4 w-4 mr-2 object-contain"/>
                TikTok</a>
                <a href="https://www.youtube.com/@editorial.apapacho" className="hover:text-brand-gold hover:translate-x-1 transition duration-300" target="_blank">
-               <img src="/images/youtube.png" alt="Instagram" className="inline h-4 w-4 mr-2 object-contain"/>
+               <img src="/images/logos/youtube.png" alt="YouTube" className="inline h-4 w-4 mr-2 object-contain"/>
                YouTube</a>
              </ul>
           </div>
