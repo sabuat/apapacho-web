@@ -138,12 +138,23 @@ export default function Layout({ children }) {
              <h4 className="font-bold uppercase tracking-widest text-md mb-8 text-brand-dark-blue">Contactos</h4>
              <div className="space-y-4 text-gray-600 font-texto font-light font-semibold">
                <p>República<br/>São Paulo, Brasil</p>
-               <p className="pt-4">contatos@<br/>editorialapapacho.com<br/>+55 11 98663 3936</p>
+               <p className="pt-4">
+                 {/* Enlace directo a Gmail */}
+                 <a 
+                   href="https://mail.google.com/mail/?view=cm&fs=1&to=contacto@editorialapapacho.com" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   className="hover:text-brand-gold transition cursor-pointer"
+                   title="Enviar correo vía Gmail"
+                 >
+                   contacto@<br/>editorialapapacho.com
+                 </a>
+                 <br/>
+                 +55 11 98663 3936
+               </p>
              </div>
           </div>
-
         </div>
-
         <div className="border-t border-gray-800/20 py-8 px-12 flex flex-col md:flex-row justify-between items-center text-xs text-brand-dark-blue uppercase tracking-widest font-bold">
            <div>
             <p>&copy; 2025 Editorial Apapacho.</p><br/>

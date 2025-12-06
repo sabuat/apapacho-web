@@ -26,9 +26,12 @@ export default function Gratis() {
              </h2>
              {/* ... Aquí dejas tus cards de descarga manuales o las automatizas también ... */}
              <div className="bg-white p-8 border border-gray-200 flex gap-6 hover:shadow-xl transition duration-300">
-                <div className="w-24 h-32 bg-gray-200 flex items-center justify-center text-xs">Portada</div>
+                <img src="/images/portadas/arena.jpg" alt="Leituras" className="inline h-72 w-72 mr-2 object-contain"/>
                 <div>
-                   <h3 className="text-2xl font-serif mt-1 mb-2">Manual para perderse</h3>
+                   <h3 className="text-2xl font-serif italic mt-1 mb-2">Arena de Tierras Extrañas</h3>
+                   <p className="font-texto text-gray-600 font-light mb-6 leading-relaxed">
+                     Una colección de cuentos cortos que exploran la identidad, el exilio, la memoria y la búsqueda de pertenencia a través de la voz de alguién que lo dejó todo atrás.
+                   </p>
                    <a href="/epubs/uno.epub" className="text-xs font-bold uppercase border-b border-black pb-1 hover:text-brand-gold">Descargar</a>
                 </div>
              </div>
