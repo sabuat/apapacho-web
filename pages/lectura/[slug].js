@@ -28,8 +28,8 @@ export default function PlantillaLectura() {
               <Link href="/gratis" className="text-xs font-bold uppercase tracking-widest text-gray-400 hover:text-black mb-6 block">
                  &larr; Volver a Lectura Libre
               </Link>
-              <span className="text-xs font-bold uppercase tracking-widest text-brand-gold mb-2 block">{texto.tipo}</span>
-              <h1 className="text-4xl md:text-6xl font-serif text-brand-dark mb-4 leading-tight">
+              <span className="text-xs font-bold uppercase tracking-widest text-brand-dark-blue mb-2 block">{texto.tipo}</span>
+              <h1 className="text-4xl md:text-6xl font-serif italic text-brand-red mb-4 leading-tight">
                 {texto.titulo}
               </h1>
               <p className="font-texto italic text-gray-500 text-sm">
@@ -44,7 +44,7 @@ export default function PlantillaLectura() {
                   {/* Si es el primer párrafo, hacemos la letra Capital (Drop Cap) */}
                   {index === 0 ? (
                     <>
-                      <span className="text-5xl float-left mr-3 mt-[-10px] font-serif text-brand-gold">
+                      <span className="text-8xl float-left mr-3 mt-[-10px] font-serif text-brand-dark-blue">
                         {parrafo.charAt(0)}
                       </span>
                       {parrafo.slice(1)}
