@@ -32,7 +32,7 @@ export default function Gratis() {
                    <p className="font-texto text-gray-600 font-light mb-6 leading-relaxed">
                      Una colección de cuentos cortos que exploran la identidad, el exilio, la memoria y la búsqueda de pertenencia a través de la voz de alguién que lo dejó todo atrás.
                    </p>
-                   <a href="/epubs/uno.epub" className="text-xs font-bold uppercase border-b border-black pb-1 hover:text-brand-gold">Descargar</a>
+                   <a href="/epubs/ate-es.epub" className="text-xs font-bold uppercase border-b border-black pb-1 hover:text-brand-gold">Descargar</a>
                 </div>
              </div>
           </div>
