@@ -150,6 +150,7 @@ export default function Home() {
                  data-netlify="true" 
                  className="w-full max-w-md space-y-6"
                  action="/exito?tipo=newsletter"
+                 netlify
                >
                   <input type="hidden" name="form-name" value="newsletter" />
                   
