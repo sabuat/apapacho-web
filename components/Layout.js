@@ -22,6 +22,7 @@ export default function Layout({ children }) {
           <Link href="/nosotros" className="hover:text-gray-500 transition">Editorial</Link>
           <Link href="/libros" className="hover:text-gray-500 transition">Libros</Link>
           <Link href="/autores" className="hover:text-gray-500 transition">Autores</Link>
+          <Link href="/blog" className="hover:text-gray-500 transition">Blog</Link>
           <Link href="/cursos" className="hover:text-gray-500 transition">Cursos</Link>
           <Link href="/manuscritos" className="border border-black px-4 py-2 hover:bg-black hover:text-white transition">
             Manuscritos
@@ -111,7 +112,7 @@ export default function Layout({ children }) {
              <ul className="space-y-4 font-medium italic font-lg flex flex-col items-start text-gray-800">
                <Link href="/libros" className="hover:text-brand-gold hover:translate-x-1 transition duration-300">Libros</Link>
                <Link href="/autores" className="hover:text-brand-gold hover:translate-x-1 transition duration-300">Nuestros Autores</Link>
-               {/* <Link href="/blog" className="hover:text-brand-gold hover:translate-x-1 transition duration-300">Blog & Noticias</Link> */}
+               <Link href="/blog" className="hover:text-brand-gold hover:translate-x-1 transition duration-300">Blog</Link>
                <Link href="/manuscritos" className="hover:text-brand-gold hover:translate-x-1 transition duration-300">Envía tu obra</Link>
              </ul>
           </div>
