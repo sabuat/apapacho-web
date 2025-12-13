@@ -2,7 +2,20 @@ import Head from 'next/head';
 import Layout from '../components/Layout';
 import Link from 'next/link';
 
-export default function Home() {
+import { getAllPosts } from '../lib/posts';
+
+export async function getStaticProps() {
+  const allPosts = getAllPosts();
+  const ultimosPosts = allPosts.slice(0, 3);
+
+  return {
+    props: {
+      posts: ultimosPosts
+    }
+  };
+}
+
+export default function Home({ posts }) {
   return (
     <Layout>
       <Head>
@@ -126,7 +139,35 @@ export default function Home() {
             </div>
          </div>
       </section>
-      {/* SECCIÓN 4: NEWSLETTER (Estilo Moero) */}
+
+      {/* SECCIÓN 4:BLOG (Ahora usa los datos automáticos) */}
+      <section className="py-12 px-6 md:px-12 bg-white border-t border-gray-200">
+          <div className="max-w-7xl mx-auto">
+            <div className="flex justify-between items-end mb-12">
+                <h2 className="text-3xl md:text-5xl font-serif text-brand-gold italic">Nuestro Blog</h2>
+                <Link href="/blog" className="hidden md:block text-xs font-bold uppercase tracking-widest border-b border-black pb-1 hover:text-brand-gold hover:border-brand-gold transition">Ver todo</Link>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+                {posts.map((post, index) => (
+                  <Link key={index} href={`/blog/${post.slug}`} className="group block">
+                      <div className="h-64 bg-gray-100 overflow-hidden mb-6 relative">
+                        {post.img && <img src={post.img} alt={post.titulo} className="w-full h-full object-cover group-hover:scale-105 transition duration-700" />}
+                      </div>
+                      <div className="flex items-center gap-4 text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-3">
+                        <span className="text-brand-gold">{post.categoria}</span>
+                        <span>&bull;</span>
+                        <span>{post.fecha}</span>
+                      </div>
+                      <h3 className="text-2xl font-serif text-brand-dark group-hover:text-brand-gold transition leading-snug mb-3">{post.titulo}</h3>
+                      <p className="font-texto text-gray-600 font-light text-sm line-clamp-3">{post.resumen}</p>
+                  </Link>
+                ))}
+            </div>
+          </div>
+      </section>
+
+      {/* SECCIÓN 5: NEWSLETTER (Estilo Moero) */}
       <section className="border-t border-gray-200 bg-white">
          <div className="grid grid-cols-1 md:grid-cols-2">
             
