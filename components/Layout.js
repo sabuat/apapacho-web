@@ -76,6 +76,9 @@ export default function Layout({ children }) {
            <Link href="/autores" onClick={() => setIsMenuOpen(false)} className="text-4xl font-serif text-brand-dark hover:text-brand-gold transition">
              Autores
            </Link>
+           <Link href="/blog" onClick={() => setIsMenuOpen(false)} className="text-4xl font-serif text-brand-dark hover:text-brand-gold transition">
+             Blog
+           </Link>
            <Link href="/cursos" onClick={() => setIsMenuOpen(false)} className="text-4xl font-serif text-brand-dark hover:text-brand-gold transition">
              Cursos
            </Link>
