@@ -23,9 +23,9 @@ export default function Cursos() {
              {/* 1. IMAGEN GRANDE ENCIMA (Cinemática) */}
              <div className="relative w-full h-[500px] overflow-hidden">
                 <img 
-                  src="/images/curso1.jpg" 
+                  src="/images/cur-1.png" 
                   alt="Taller de Escritura" 
-                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-1000 transform group-hover:scale-105"
+                  className="w-full h-90% object-cover grayscale group-hover:grayscale-0 transition duration-1000 transform group-hover:scale-105"
                 />
                 
                 {/* Badge Flotante (Esquina superior derecha, muy minimalista) */}
@@ -42,7 +42,7 @@ export default function Cursos() {
                    <div className="flex items-center gap-2 text-brand-red">
                       <span className="text-xs uppercase tracking-widest font-bold">Taller Online</span>
                    </div>
-                   <p className="font-serif text-3xl italic text-brand-dark">$45 USD</p>
+                   <p className="font-serif text-3xl italic text-brand-dark">$5 USD</p>
                 </div>
                 
                 {/* Título Grande */}
@@ -52,19 +52,23 @@ export default function Cursos() {
                 
                 {/* Descripción */}
                 <p className="font-texto text-gray-600 text-lg leading-relaxed mb-10 font-light">
-                  Un taller intensivo de 4 semanas. Aprenderemos estructura, creación de personajes tridimensionales y cómo encontrar tu propia voz narrativa, lejos de los clichés.
+                  Es un viaje introspectivo de cuatro semanas diseñado para quienes sienten el impulso de escribir, no solo para contar una historia, sino para descubrirse y sanar a través de ella. Utilizaremos la escritura a mano como herramienta principal para conectar con la autenticidad, explorando la narrativa como un acto de refugio y reconstrucción personal.
                 </p>
 
                 {/* Footer del Card: Detalles y Botón */}
                 <div className="flex flex-col md:flex-row justify-between items-center gap-6 pt-4">
                    <div className="flex gap-8 text-xs uppercase tracking-widest text-gray-500 font-semibold">
-                      <span>FECHA: 15 de Octubre</span>
+                      <span>FECHA: 15 de Enero</span>
                       <span>HORA: 19:00 PM (Hora Vzla)</span>
                    </div>
 
-                   <button className="w-full md:w-auto bg-brand-dark-blue text-white px-10 py-4 text-xs uppercase tracking-widest font-bold hover:bg-brand-gold transition">
-                      Reservar Cupo
-                   </button>
+                {/* Reemplaza el botón antiguo por esto */}
+                  <Link 
+                  href="/cursos/escritura-creativa" 
+                  className="w-full md:w-auto inline-block text-center bg-brand-dark-blue text-white px-10 py-4 text-xs uppercase tracking-widest font-bold hover:bg-brand-gold transition"
+                  >
+                  Ver Detalles y Reservar
+                  </Link>
                 </div>
              </div>
           </div>
@@ -73,9 +77,9 @@ export default function Cursos() {
           <div className="group bg-white border border-gray-200 opacity-60 hover:opacity-100 transition duration-500">
              
              {/* IMAGEN GRANDE ENCIMA */}
-             <div className="relative w-full h-[500px] overflow-hidden">
+             <div className="relative w-90% h-[500px] overflow-hidden">
                 <img 
-                  src="/images/curso2.jpg" 
+                  src="/images/curso1.jpg" 
                   alt="Conferencia" 
                   className="w-full h-full object-cover filter grayscale"
                 />
