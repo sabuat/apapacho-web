@@ -6,23 +6,25 @@ export default function CursoEscritura() {
     <Layout>
       <div className="bg-brand-bg min-h-screen">
         
-        {/* --- HERO SECTION --- */}
-        <div className="relative h-[60vh] w-full overflow-hidden">
+        {/* --- HERO SECTION (IMAGEN) --- */}
+        <div className="relative w-full h-[90%] md:h-[90%] overflow-hidden">
            <img 
              src="/images/Checkout.png" 
              alt="Escritura Creativa" 
-             className="w-full h-90% object-cover brightness-90"
+             className="w-full h-full object-cover brightness-90" 
            />
         </div>
-        <div className="relative h-[60vh] w-full overflow-hidden">
-           <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-6">
-              <span className="text-brand-blue text-md font-bold uppercase tracking-[0.2em] mb-4">
+
+        {/* --- TÍTULO Y DESCRIPCIÓN (TEXTO) --- */}
+        <div className="w-full bg-brand-bg py-12 md:py-20 px-6">
+           <div className="max-w-4xl mx-auto flex flex-col justify-center items-center text-center">
+              <span className="text-brand-blue text-sm font-bold uppercase tracking-[0.2em] mb-4">
                 Taller Online &bull; 4 Semanas
               </span>
-              <h1 className="text-5xl md:text-7xl font-serif italic text-brand-gold mb-6 max-w-4xl">
+              <h1 className="text-4xl md:text-7xl font-serif italic text-brand-gold mb-6 leading-tight">
                 Escritura Creativa para Principiantes
               </h1>
-              <p className="text-brand-blue text-xl font-light max-w-2xl font-texto">
+              <p className="text-brand-blue text-lg md:text-xl font-light max-w-2xl font-texto">
                 Encuentra tu voz entre la tinta y el exilio. Taller intensivo para quienes desean escribir desde la autenticidad y sanar a través de la narrativa.
               </p>
            </div>

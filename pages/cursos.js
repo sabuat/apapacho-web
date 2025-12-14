@@ -21,7 +21,7 @@ export default function Cursos() {
           <div className="group bg-white border border-gray-200 hover:shadow-2xl transition duration-500">
              
              {/* 1. IMAGEN GRANDE ENCIMA (Cinemática) */}
-             <div className="relative w-full h-[500px] overflow-hidden">
+             <div className="relative w-full h-[90%] overflow-hidden">
                 <img 
                   src="/images/cur-1.png" 
                   alt="Taller de Escritura" 
