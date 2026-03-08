@@ -7,17 +7,17 @@ import { supabase } from '../../lib/supabase';
 export async function getServerSideProps(context) {
   const { slug } = context.params;
 
-  const { data: book } = await supabase
+  const { data: book, error } = await supabase
     .from('books')
     .select('*')
     .eq('slug', slug)
     .single();
 
-  if (!book) {
+  if (!book || error) {
     return { notFound: true }; // Muestra página 404 si el libro no existe
   }
 
-  // Mapeamos igual que en la lista
+  // Leemos los datos comerciales directamente de tu base de datos
   const libro = {
     slug: book.slug,
     titulo: book.title,
@@ -25,9 +25,9 @@ export async function getServerSideProps(context) {
     img: book.cover_url || '/images/portadas/Perdido.jpg',
     tag: book.genre || 'Literatura',
     sinopsis: book.description ? book.description.split('\n') : ['Sin sinopsis'],
-    paginas: "---",
-    asin: "---",
-    linkAmazon: "#",
+    paginas: book.paginas || "---",
+    asin: book.asin || "---",
+    linkAmazon: book.link_amazon || "#",
     estado: book.published ? "disponible" : "proximamente"
   };
 
@@ -36,7 +36,6 @@ export async function getServerSideProps(context) {
 
 export default function FichaLibro({ libro }) {
   const [showModal, setShowModal] = useState(false);
-
   const estaDisponible = libro.estado === 'disponible';
 
   return (
@@ -87,23 +86,36 @@ export default function FichaLibro({ libro }) {
                   </div>
                 )}
 
-                <div className="flex items-center gap-8 mt-4">
+                {/* MODIFICACIÓN: Contenedor flexible para que los botones se adapten al teléfono o PC */}
+                <div className="flex flex-col md:flex-row items-center gap-4 md:gap-6 mt-4">
                     {!estaDisponible ? (
                       <button 
                         onClick={() => setShowModal(true)}
-                        className="bg-brand-dark-blue text-white px-8 py-4 text-xs font-bold uppercase tracking-widest hover:bg-brand-gold transition shadow-lg w-full md:w-auto"
+                        className="bg-brand-dark-blue text-white px-8 py-4 text-xs font-bold uppercase tracking-widest hover:bg-brand-gold transition shadow-lg w-full md:w-auto text-center"
                       >
                         Avísame cuando esté disponible
                       </button>
                     ) : (
-                      <a 
-                          href={libro.linkAmazon} 
-                          target="_blank" 
-                          rel="noopener noreferrer"
-                          className="bg-black text-white px-8 py-4 text-xs font-bold uppercase tracking-widest hover:bg-brand-gold transition"
-                      >
-                          Comprar en Amazon
-                      </a>
+                      <>
+                        <a 
+                            href={libro.linkAmazon} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="bg-black text-white px-8 py-4 text-xs font-bold uppercase tracking-widest hover:bg-brand-gold transition w-full md:w-auto text-center"
+                        >
+                            Comprar en Amazon
+                        </a>
+                        
+                        {/* NUEVO BOTÓN: Leer en la app */}
+                        <a 
+                            href="#" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="bg-brand-dark-blue text-white px-8 py-4 text-xs font-bold uppercase tracking-widest hover:bg-brand-gold transition shadow-md w-full md:w-auto text-center"
+                        >
+                            Leer en la app
+                        </a>
+                      </>
                     )}
                 </div>
             </div>

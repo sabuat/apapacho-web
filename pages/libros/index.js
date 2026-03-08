@@ -4,10 +4,14 @@ import { supabase } from '../../lib/supabase';
 
 // MAGIA: Esta función descarga los datos de Supabase antes de cargar la página
 export async function getServerSideProps() {
-  const { data: books } = await supabase
+  const { data: books, error } = await supabase
     .from('books')
     .select('*')
-    .order('id', { ascending: false });
+    .order('identificador', { ascending: true }); // <--- Ordenado por tu columna identificador
+
+  if (error) {
+    console.error("Error cargando libros:", error);
+  }
 
   // Traducimos los datos de Supabase al formato que le gusta a tu web
   const libros = (books || []).map(b => ({
@@ -16,12 +20,11 @@ export async function getServerSideProps() {
     autor: b.author,
     img: b.cover_url || '/images/portadas/Perdido.jpg',
     tag: b.genre || 'Literatura',
-    // Si hay descripción, la separamos por saltos de línea para crear párrafos
     sinopsis: b.description ? b.description.split('\n') : ['Sin sinopsis'],
-    paginas: "---", 
-    asin: "---",
-    linkAmazon: "#",
-    estado: b.published ? "disponible" : "proximamente"
+    paginas: b.paginas || "---",
+    asin: b.asin || "---",
+    linkAmazon: b.link_amazon || "#",
+    estado: b.published ? "disponible" : "proximamente" // <--- Lee el true/false y lo traduce
   }));
 
   return { props: { libros } };
@@ -33,18 +36,22 @@ export default function Libros({ libros }) {
     <Layout>
       <div className="bg-brand-bg min-h-screen flex flex-col">
         
+        {/* Cabecera */}
         <div className="pt-12 pb-12 px-6 md:px-12 text-center border-b border-gray-200">
           <h1 className="text-5xl md:text-7xl font-serif text-brand-gold mb-4">Catálogo</h1>
           <p className="text-xl font-texto text-gray-600 italic">Nuestras historias publicadas</p>
         </div>
 
+        {/* Grid de Libros */}
         <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-200 border-b border-gray-200 flex-grow">
           {libros.map((libro, index) => (
             <div key={index} className="group relative min-h-[500px] hover:bg-white transition duration-500">
               <div className="p-12 flex flex-col h-full justify-between">
                 
+                {/* Tag Superior */}
                 <span className="text-xs font-bold uppercase tracking-widest text-brand-gold">{libro.tag}</span>
                 
+                {/* Imagen Centrada */}
                 <div className="flex-grow flex items-center justify-center py-8">
                    <img 
                      src={libro.img} 
@@ -53,6 +60,7 @@ export default function Libros({ libros }) {
                    />
                 </div>
 
+                {/* Info Inferior */}
                 <div className="text-center md:text-left">
                   <h3 className="text-2xl font-serif italic text-brand-gold mb-2 group-hover:text-brand-gold transition">{libro.titulo}</h3>
                   <p className="text-sm font-texto uppercase tracking-widest text-gray-500">{libro.autor}</p>
@@ -65,7 +73,10 @@ export default function Libros({ libros }) {
           ))}
         </div>
 
+        {/* NAVEGACIÓN (CTA) */}
         <div className="grid grid-cols-1 md:grid-cols-2">
+            
+            {/* Bloque Izquierdo: Autores */}
             <Link href="/autores" className="group bg-white p-16 md:p-24 flex flex-col justify-center items-start border-r border-gray-200 hover:bg-gray-50 transition duration-500">
                 <span className="text-xs font-bold uppercase tracking-widest text-brand-gold mb-4 group-hover:translate-x-1 transition">Talento</span>
                 <h2 className="text-4xl md:text-5xl font-serif text-brand-dark mb-6 leading-tight">
@@ -77,6 +88,7 @@ export default function Libros({ libros }) {
                 </span>
             </Link>
 
+            {/* Bloque Derecho: Lectura Gratis */}
             <Link href="/gratis" className="group bg-brand-dark-blue p-16 md:p-24 flex flex-col justify-center items-start text-white hover:bg-[#1a2f2f] transition duration-500">
                 <span className="text-xs font-bold uppercase tracking-widest text-brand-gold mb-4 group-hover:translate-x-1 transition">Comunidad</span>
                 <h2 className="text-4xl md:text-5xl font-serif mb-6 leading-tight">
@@ -87,6 +99,7 @@ export default function Libros({ libros }) {
                     Ir a la Biblioteca
                 </span>
             </Link>
+
         </div>
 
       </div>
