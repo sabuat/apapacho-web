@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Layout from '../../components/Layout';
 import Link from 'next/link';
 import { supabase } from '../../lib/supabase';
@@ -18,7 +18,9 @@ export async function getServerSideProps(context) {
   }
 
   // Leemos los datos comerciales directamente de tu base de datos
+  // 🌟 AÑADIDO: Necesitamos el ID real del libro para pasarlo a la App
   const libro = {
+    id: book.id, 
     slug: book.slug,
     titulo: book.title,
     autor: book.author,
@@ -35,8 +37,32 @@ export async function getServerSideProps(context) {
 }
 
 export default function FichaLibro({ libro }) {
-  const [showModal, setShowModal] = useState(false);
+  const [showWaitlistModal, setShowWaitlistModal] = useState(false);
+  const [showAppModal, setShowAppModal] = useState(false); // 🌟 ESTADO PARA EL NUEVO MODAL
   const estaDisponible = libro.estado === 'disponible';
+
+  // 🌟 CONFIGURACIÓN DE URLS (Ajusta los dominios según tu configuración final)
+  const WEB_APP_URL = `https://app.editorialapapacho.com/leer?bookId=${libro.id}`;
+  const PLAY_STORE_URL = "https://play.google.com/store/apps/details?id=com.sabuat.apapacho"; // Reemplaza con tu ID real de Play Store
+  
+  // Scheme personalizado. Debes configurarlo en el AndroidManifest.xml de tu app.
+  const ANDROID_DEEP_LINK = `intent://leer?bookId=${libro.id}#Intent;scheme=apapacho;package=com.sabuat.apapacho;end`;
+
+  // 🌟 LÓGICA DE DEEP LINKING
+  const handleOpenAndroidApp = (e) => {
+      e.preventDefault();
+      
+      // Intentamos abrir el Deep Link
+      window.location.href = ANDROID_DEEP_LINK;
+
+      // Si después de 2.5 segundos seguimos en la misma página, asumimos que la app no está instalada
+      // y redirigimos a la Play Store.
+      setTimeout(() => {
+          if (document.hasFocus()) {
+              window.location.href = PLAY_STORE_URL;
+          }
+      }, 2500);
+  };
 
   return (
     <Layout>
@@ -86,11 +112,10 @@ export default function FichaLibro({ libro }) {
                   </div>
                 )}
 
-                {/* MODIFICACIÓN: Contenedor flexible para que los botones se adapten al teléfono o PC */}
                 <div className="flex flex-col md:flex-row items-center gap-4 md:gap-6 mt-4">
                     {!estaDisponible ? (
                       <button 
-                        onClick={() => setShowModal(true)}
+                        onClick={() => setShowWaitlistModal(true)}
                         className="bg-brand-dark-blue text-white px-8 py-4 text-xs font-bold uppercase tracking-widest hover:bg-brand-gold transition shadow-lg w-full md:w-auto text-center"
                       >
                         Avísame cuando esté disponible
@@ -106,15 +131,13 @@ export default function FichaLibro({ libro }) {
                             Comprar en Amazon
                         </a>
                         
-                        {/* NUEVO BOTÓN: Leer en la app */}
-                        <a 
-                            href="#" 
-                            target="_blank" 
-                            rel="noopener noreferrer"
+                        {/* 🌟 MODIFICADO: Ahora abre el Modal de Selección de Plataforma */}
+                        <button 
+                            onClick={() => setShowAppModal(true)}
                             className="bg-brand-dark-blue text-white px-8 py-4 text-xs font-bold uppercase tracking-widest hover:bg-brand-gold transition shadow-md w-full md:w-auto text-center"
                         >
                             Leer en la app
-                        </a>
+                        </button>
                       </>
                     )}
                 </div>
@@ -122,11 +145,12 @@ export default function FichaLibro({ libro }) {
         </div>
       </div>
 
-      {showModal && (
+      {/* MODAL ORIGINAL: LISTA DE ESPERA */}
+      {showWaitlistModal && (
         <div className="fixed inset-0 z-[99] flex items-center justify-center p-4">
-          <div className="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity" onClick={() => setShowModal(false)}></div>
+          <div className="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity" onClick={() => setShowWaitlistModal(false)}></div>
           <div className="bg-white relative z-10 w-full max-w-md p-8 md:p-12 shadow-2xl border-t-4 border-brand-gold">
-             <button onClick={() => setShowModal(false)} className="absolute top-4 right-4 text-gray-400 hover:text-black text-xl font-bold">&times;</button>
+             <button onClick={() => setShowWaitlistModal(false)} className="absolute top-4 right-4 text-gray-400 hover:text-black text-xl font-bold">&times;</button>
              <div className="text-center mb-8">
                <span className="text-xs font-bold uppercase tracking-widest text-brand-gold mb-2 block">Lista de Espera</span>
                <h3 className="text-3xl font-serif text-brand-dark mb-4">¡Sé el primero!</h3>
@@ -149,6 +173,52 @@ export default function FichaLibro({ libro }) {
                   <button type="submit" className="w-full bg-black text-white py-4 text-xs font-bold uppercase tracking-widest hover:bg-brand-gold transition mt-4">Unirme a la lista</button>
                 </div>
              </form>
+          </div>
+        </div>
+      )}
+
+      {/* 🌟 NUEVO MODAL: SELECCIÓN DE PLATAFORMA */}
+      {showAppModal && (
+        <div className="fixed inset-0 z-[99] flex items-center justify-center p-4">
+          <div className="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity" onClick={() => setShowAppModal(false)}></div>
+          <div className="bg-white relative z-10 w-full max-w-md p-8 md:p-12 shadow-2xl border-t-4 border-brand-gold">
+             <button onClick={() => setShowAppModal(false)} className="absolute top-4 right-4 text-gray-400 hover:text-black text-xl font-bold">&times;</button>
+             
+             <div className="text-center mb-8">
+               <span className="text-xs font-bold uppercase tracking-widest text-brand-gold mb-2 block">Apapacho Reader</span>
+               <h3 className="text-2xl font-serif text-brand-dark mb-4">¿Cómo prefieres leer?</h3>
+               <p className="font-texto text-gray-600 text-sm mb-6">
+                 Disfruta de "{libro.titulo}" en nuestra aplicación oficial para Android o directamente desde tu navegador web.
+               </p>
+             </div>
+
+             <div className="flex flex-col gap-4">
+                {/* Opción 1: Continuar en la Web */}
+                <a 
+                    href={WEB_APP_URL}
+                    className="w-full bg-brand-bg text-brand-dark border border-brand-gold/30 py-4 text-xs font-bold uppercase tracking-widest hover:bg-brand-gold/10 transition text-center"
+                >
+                    Continuar en la Web (Navegador)
+                </a>
+
+                {/* Opción 2: Abrir App (Android) */}
+                <button 
+                    onClick={handleOpenAndroidApp}
+                    className="w-full bg-brand-dark-blue text-white py-4 text-xs font-bold uppercase tracking-widest hover:bg-brand-gold transition shadow-md text-center"
+                >
+                    Abrir App (Android)
+                </button>
+                
+                {/* Opción 3: Descargar App (Opcional, explicativo) */}
+                <a 
+                    href={PLAY_STORE_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full text-gray-400 text-[10px] font-bold uppercase tracking-widest hover:text-brand-gold transition text-center underline underline-offset-4 mt-2"
+                >
+                    No tengo la app. Descargar de Google Play.
+                </a>
+             </div>
           </div>
         </div>
       )}
