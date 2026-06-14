@@ -18,6 +18,13 @@ const autores = [
     img: "/images/erika.jpg",
     url: "/autores/erika-villarroel" 
   },
+    { 
+    nombre: "Henry Junior", 
+    rol: "Novela",
+    bio: "Explorando la vida cotidiana con una mirada única.", 
+    img: "/images/henry.png",
+    url: "/autores/henry-junior" 
+  },
 ];
 
 export default function Autores() {

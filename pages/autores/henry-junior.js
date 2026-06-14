@@ -59,24 +59,13 @@ export default function SabuatPerfil() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     
                     {/* Libro 1 */}
-                    <Link href="/libros/bestias-de-tierras-malditas" className="group flex items-center gap-6 p-4 hover:bg-gray-50 transition border border-transparent hover:border-gray-100">
+                    <Link href="/libros/bestias-tierras-malditas" className="group flex items-center gap-6 p-4 hover:bg-gray-50 transition border border-transparent hover:border-gray-100">
                         <div className="w-20% h-36 bg-gray-200 shadow-md">
-                            <img src="/images/BTM.jpg" className="w-full h-full object-cover"/>
+                            <img src="/images/portadas/sugar.jpg" className="w-full h-full object-cover"/>
                         </div>
                         <div>
-                            <h4 className="font-serif text-xl group-hover:text-brand-red transition">Bestias de Tierras Malditas</h4>
-                            <span className="text-xs font-bold uppercase tracking-widest text-brand-gold">Cuentos</span>
-                        </div>
-                    </Link>
-
-                    {/* Libro 2 */}
-                    <Link href="/libros/imagina-dragones" className="group flex items-center gap-6 p-4 hover:bg-gray-50 transition border border-transparent hover:border-gray-100">
-                        <div className="w-20% h-36 bg-gray-200 shadow-md">
-                           <img src="/images/imagina.jpg" className="w-full h-full object-cover"/>
-                        </div>
-                        <div>
-                            <h4 className="font-serif text-xl group-hover:text-brand-red transition">Imagina Dragones</h4>
-                            <span className="text-xs font-bold uppercase tracking-widest text-brand-gold">Próximamente</span>
+                            <h4 className="font-serif text-xl group-hover:text-brand-red transition">Um Sugar para o Motoboy</h4>
+                            <span className="text-xs font-bold uppercase tracking-widest text-brand-gold">Novela Corta</span>
                         </div>
                     </Link>
 

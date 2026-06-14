@@ -68,18 +68,18 @@ export default function SabuatPerfil() {
                     {/* Libro 1 */}
                     <Link href="/libros/la-ultima-dragona" className="group flex items-center gap-6 p-4 hover:bg-gray-50 transition border border-transparent hover:border-gray-100">
                         <div className="w-20% h-36 bg-gray-200 shadow-md">
-                            <img src="/images/Dragona.jpg" className="w-full h-full object-cover"/>
+                            <img src="/images/portadas/Dragona.jpg" className="w-full h-full object-cover"/>
                         </div>
                         <div>
                             <h4 className="font-serif text-xl group-hover:text-brand-red transition">La Última Dragona</h4>
-                            <span className="text-xs font-bold uppercase tracking-widest text-brand-gold">Noveja Joven</span>
+                            <span className="text-xs font-bold uppercase tracking-widest text-brand-gold">Novela Juvenil</span>
                         </div>
                     </Link>
 
                     {/* Libro 2 */}
                     <Link href="/libros/diez-besos-tontos" className="group flex items-center gap-6 p-4 hover:bg-gray-50 transition border border-transparent hover:border-gray-100">
                         <div className="w-20% h-36 bg-gray-200 shadow-md">
-                           <img src="/images/besos.jpg" className="w-full h-full object-cover"/>
+                           <img src="/images/portadas/besos.jpg" className="w-full h-full object-cover"/>
                         </div>
                         <div>
                             <h4 className="font-serif text-xl group-hover:text-brand-red transition">Diez Besos Tontos</h4>
