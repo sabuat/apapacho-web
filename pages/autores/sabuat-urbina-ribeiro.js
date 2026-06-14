@@ -40,7 +40,7 @@ export default function SabuatPerfil() {
                 {/* Texto Biográfico (Aquí escribes todo lo que quieras) */}
                 <div className="md:col-span-7 prose prose-lg font-texto text-gray-600">
                     <p className="leading-relaxed mb-6">
-                        <span className="font-bold text-black text-xl">Sabuat Urbina Ribeiro</span> nació en Caracas, Venezuela. Desde muy joven mostró interés por las historias que habitan en los márgenes de la realidad. Con 13  leyó "Cien Años de Soledad" de Gabriel García Márquez, lo que marcó el inicio de su fascinación por el realismo mágico.
+                        <span className="font-bold text-black text-xl">Sabuat Urbina Ribeiro</span> nació en Caracas, Venezuela. Desde muy joven mostró interés por las historias que habitan en los márgenes de la realidad. Con trece años leyó "Cien Años de Soledad" de Gabriel García Márquez, lo que marcó el inicio de su fascinación por el realismo mágico.
                     </p>
                     <p className="leading-relaxed mb-6">
                         Su obra se caracteriza por una prosa poética pero cruda, explorando temas como el desarraigo, la memoria y el 'no-lugar' del emigrante. A pesar de sus inicios en la escritura con el sueño de ser novelista, encontró en los cuentos su verdadera voz literaria.
