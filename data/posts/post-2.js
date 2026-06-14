@@ -1,12 +1,12 @@
 export default {
-  slug: "crendo-epubs-en-el-mundo-digital",
-  titulo: "La edición digital como refugio",
+  slug: "escitura-manual-en-la-era-digital",
+  titulo: "La revolución analógica",
   autor: "Salma Utiel",
   autorFoto: "/images/blog/salma.jpg",
   fecha: "10 Dec 2025",
   categoria: "Epubs",
-  img: "/images/blog/post-8.avif",
-  resumen: "Cómo nacen nuestros epubs en un mundo saturado de pantallas y atención fragmentada.",
+  img: "/images/blog/post-3.avif",
+  resumen: "¿Por qué el bolígrafo venció al teclado en la era digital? La sorprendente vuelta a la escritura manual entre autores contemporáneos.",
   contenido: [
     "**SAO PAULO.** — En la Editorial Apapacho, donde todo se publica en formato digital, sin embargo, en el ambiente donde esta editorial nace hay un objeto que desafía la lógica del entorno: una pila de cuadernos manuscritos que contienen algunos de los próximos lanzamientos de la casa. **Sabuat Urbina Ribeiro**, fundador y autor principal, defiende esta paradoja con la convicción del converso: *‘El camino más eficiente hacia el libro digital perfecto comienza con la imperfección de la tinta sobre papel'*.",
 

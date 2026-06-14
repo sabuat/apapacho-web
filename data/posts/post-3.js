@@ -1,12 +1,12 @@
 export default {
-  slug: "escitura-manual-en-la-era-digital",
-  titulo: "La revolución analógica",
+  slug: "creando-epubs-en-el-mundo-digital",
+  titulo: "La edición digital como refugio",
   autor: "Salma Utiel",
   autorFoto: "/images/blog/salma.jpg",
   fecha: "22 Dec 2025",
   categoria: "Escritura Creativa",
-  img: "/images/blog/post-3.avif",
-  resumen: "¿Por qué el bolígrafo venció al teclado en la era digital? La sorprendente vuelta a la escritura manual entre autores contemporáneos.",
+  img: "/images/blog/post-8.avif",
+  resumen: "Cómo nacen nuestros epubs en un mundo saturado de pantallas y atención fragmentada.",
   contenido: [
     "**SAO PAULO.** — En un mundo saturado de pantallas y contenido efímero, ¿dónde reside el valor de un abrazo literario? La **Editorial Apapacho**, con su filosofía de *‘historias que sanan, emocionan y transforman’, enfrenta esta paradoja moderna con una respuesta clara: el refugio no está en el papel, sino en la **intencionalidad digital**. En una industria que a menudo equipara ‘libro digital’ con **producción masiva y rápida**, esta pequeña editorial venezolano-brasileña se erige como artesana del ePub.",
     
